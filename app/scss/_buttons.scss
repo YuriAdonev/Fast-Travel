@@ -1,0 +1,25 @@
+.btn {
+	display: flex;
+	align-items: center;
+	height: 35px;
+	padding: 0 18px;
+	
+	font-size: 10px;
+	letter-spacing: 0.7px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: "gilroy-bold", sans-serif;
+	color: $white;
+	
+	background-color: $accent;
+	border-radius: 18px;
+	
+	&--mini {
+		height: 30px;
+		
+		font-size: 8px;
+		
+		border-radius: 15px;
+	}
+}
