@@ -1,0 +1,46 @@
+.pagination {
+	&__wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__link {
+		margin-right: 12px;
+		
+		font-size: 14px;
+		text-decoration: none;
+		color: #000;
+		
+		transition: 0.2s linear;
+		
+		@media (min-width: $desktop) {
+			margin-right: 15px;
+			
+			font-size: 18px;
+		}
+		&:hover {
+			color: $accent;
+		}
+		svg {
+			display: block;
+			
+			fill: $accent;
+
+			@media (min-width: $desktop) {
+				width: 14px;
+				height: 14px;
+			}
+		}
+		&--current{
+			color: $accent;
+		}
+		&--prev{
+		}
+		&--next{
+			margin-right: 0;
+		}
+	}
+	span {
+		margin-right: 12px;
+	}
+}

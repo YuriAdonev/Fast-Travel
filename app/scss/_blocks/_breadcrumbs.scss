@@ -2,8 +2,10 @@
 	display: none;
 	
 	@media (min-width: $desktop) {
+		position: absolute;
 		display: block;
-		margin-top: 160px;
+		top: 170px;
+		width: 100%;
 	}
 	&__wrap {
 		display: flex;

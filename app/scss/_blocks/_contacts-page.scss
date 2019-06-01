@@ -1,0 +1,121 @@
+.contacts-page {
+	padding: 30px 0 40px;
+	
+	background-image: url(../img/contacts-page-bg-mobile.jpg);
+	background-repeat: no-repeat;
+	background-position: right 110px;
+	
+	@media (min-width: $desktop) {
+		padding: 190px 0 100px;
+		
+		background-image: url(../img/contacts-page-bg-desktop.jpg);
+		background-position: 140% 100px;
+	}
+	&__wrap {
+		width: 260px;
+		margin: 0 auto;
+		
+		@media (min-width: $desktop) {
+			width: 1170px;
+		}
+	}
+	&__title {
+		margin-bottom: 35px;
+		
+		text-align: center;
+		
+		@media (min-width: $desktop) {
+			margin: 30px 0 35px;
+			text-align: left;
+		}
+	}
+	&__content {
+		width: 260px;
+		margin: 0 auto;
+		
+		@media (min-width: $desktop) {
+			display: flex;
+			width: 1170px;
+		}
+	}
+	&__col {
+		
+		@media (min-width: $desktop) {
+			&:nth-of-type(1) {
+				width: 300px;
+			}
+			&:nth-of-type(2) {
+				width: 250px;
+				margin-left: 70px;
+			}
+		}
+	}
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 42px;
+		height: 42px;
+		margin: 0 auto;
+		
+		background-color: $accent;
+		border-radius: 50%;
+		
+		@media (min-width: $desktop) {
+			width: 61px;
+			height: 61px;
+			margin: 0;
+		}
+		svg {
+			fill: $white;
+		}
+		&--place{
+			svg {
+				@media (min-width: $desktop) {
+					width: 25px;
+					height: 25px;
+				}
+			}
+		}
+		&--envelope{
+			svg {
+				@media (min-width: $desktop) {
+					width: 23px;
+					height: 23px;
+				}
+			}
+		}
+		&--time{
+			svg {
+				@media (min-width: $desktop) {
+					width: 27px;
+					height: 27px;
+				}
+			}
+		}
+		&--phone{
+			svg {
+				@media (min-width: $desktop) {
+					width: 25px;
+					height: 25px;
+				}
+			}
+		}
+	}
+	&__map {
+		margin-top: 55px;
+		
+		@media (min-width: $desktop) {
+			margin-top: 0;
+			margin-left: auto;
+		}
+		img {
+			object-fit: cover;
+			
+			@media (min-width: $desktop) {
+				width: 470px;
+				height: 583px;
+			}
+		}
+	}
+}
