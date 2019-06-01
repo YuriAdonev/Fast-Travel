@@ -1,15 +1,8 @@
-.header {
+.footer {
 	background-color: $dark-bg-mobile;
 	
 	@media (min-width: $desktop) {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 100;
-
-		width: 100%;
-		
-		transition: 0.4s linear;
+		background-color: $dark-bg;
 	}
 	&__wrap {
 		display: flex;
@@ -46,40 +39,8 @@
 		}
 		
 		@media (min-width: $desktop) {
-			margin-left: 100px;
-		}
-	}
-	&__write {
-		margin-left: auto;
-		
-		@media (min-width: $tablet) {
-			order: 1;
-			margin-left: 0;
-		}
-		
-		@media (min-width: $desktop) {
-			margin-bottom: 5px;
-		}
-	}
-	&__email {
-		display: none;
-		
-		@media (min-width: $desktop) {
-			display: block;
-			
-			font-size: 18px;
-			text-decoration: none;
-			font-family: "gilroy-bold", sans-serif;
-			color: $white;
-		}
-	}
-	&__contacts {
-		@media (min-width: $tablet) {
-			order: 2;
-		}
-		
-		@media (min-width: $desktop) {
-			margin-left: 70px;
+			order: 3;
+			margin-left: 50px;
 		}
 	}
 	&__phone {
@@ -90,13 +51,24 @@
 		text-decoration: none;
 		color: $white;
 		
-		@media (min-width: $tablet) and (max-width: $desktop - 1px) {
+		@media (min-width: $tablet) {
+			order: 2;
 			margin-left: 50px;
 		}
 		
 		@media (min-width: $desktop) {
+			margin-left: 60px;
+			
 			font-size: 18px;
-			font-family: "gilroy-bold", sans-serif;
+			color: #b3b3b3;
+			
+			transition: color 0.2s linear;
+		}
+		
+		&:hover {
+			@media (min-width: $desktop) {
+				color: #fff;
+			}
 		}
 		svg {
 			margin-right: 10px;
@@ -113,27 +85,12 @@
 			font-family: "gilroy-bold", sans-serif;
 			
 			@media (min-width: $desktop) {
-				
+				font-family: "gilroy-regular", sans-serif;
 			}
 		}
 	}
-	&__address {
-		display: none;
-		
-		@media (min-width: $desktop) {
-			display: block;
-			
-			font-size: 18px;
-			font-family: "gilroy-bold", sans-serif;
-			color: $white;
-		}
-	}
-	&__burger{
-		margin-left: 25px;
-		
-		@media (min-width: $tablet) {
-			display: none;
-		}
+	&__social {
+		margin-left: auto;
 	}
 	&__logo {
 		display: flex;
@@ -166,20 +123,40 @@
 			display: none;
 		}
 	}
-	&__logo-desc {
+	&__email {
 		display: none;
 		
 		@media (min-width: $desktop) {
+			order: 2;
 			display: block;
-			width: 210px;
-			margin-left: 45px;
-			
+			margin-left: 65px;
+		
 			font-size: 18px;
-			font-family: "gilroy-bold", sans-serif;
-			color: $white;
+			text-decoration: none;
+			color: #b3b3b3;
+			
+			transition: color 0.2s linear;
+		}
+		
+		&:hover {
+			@media (min-width: $desktop) {
+				color: #fff;
+			}
 		}
 	}
-	&__btn{
+	&__address {
+		display: none;
+		
+		@media (min-width: $desktop) {
+			order: 4;
+			display: block;
+			margin-left: 45px;
+		
+			font-size: 18px;
+			color: #b3b3b3;
+		}
+	}
+	&__btn {
 		margin: 10px 30px 10px auto;
 		
 		@media (min-width: $tablet) {
@@ -188,13 +165,8 @@
 		}
 		
 		@media (min-width: $desktop) {
+			order: 5;
 			margin: 0 0 0 auto;
-		}
-	}
-	&--scroll {
-		@media (min-width: $desktop) {
-			background-color: $dark-bg;
-			box-shadow: 0 28px 87px 0 rgba(0, 0, 0, 0.3);
 		}
 	}
 }

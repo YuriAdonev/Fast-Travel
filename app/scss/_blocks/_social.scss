@@ -5,6 +5,10 @@
 		
 		padding: 30px 0 40px;
 		box-sizing: border-box;
+		
+		@media (min-width: $desktop) {
+			padding: 95px 0 100px;
+		}
 	}
 	&__bg {
 		position: absolute;
@@ -18,14 +22,22 @@
 		font-family: "celeste-pro-book", serif;
 		color: #2a2a2b;
 		opacity: 0.15;
+		
+		@media (min-width: $desktop) {
+			font-size: 322px;
+		}
 	}
 	&__title{
 		width: 220px;
 		margin: 14px auto 20px;
 		
-		line-height: 30px;
 		text-align: center;
 		color: $white;
+		
+		@media (min-width: $desktop) {
+			width: 540px;
+			margin: 30px auto 40px;
+		}
 	}
 }
 
@@ -49,11 +61,34 @@
 		background-color: $accent;
 		border-radius: 50%;
 		
+		@media (min-width: $desktop) {
+			width: 72px;
+			height: 72px;
+		}
+		
 		&:not(:last-child) {
 			margin-right: 15px;
+			
+			@media (min-width: $desktop) {
+				margin-right: 30px;
+			}
 		}
-		svg {
-			fill: $white;
+	}
+	&__icon {
+		fill: $white;
+
+		&--vk {
+			@media (min-width: $desktop) {
+				width: 30px;
+				height: 30px;
+				margin-top: 3px;
+			}
+		}
+		&--instagram {
+			@media (min-width: $desktop) {
+				width: 24px;
+				height: 24px;
+			}
 		}
 	}
 }

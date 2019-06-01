@@ -1,0 +1,14 @@
+.home-page {
+	.header {
+		@media (min-width: $desktop) {
+			background-color: transparent;
+		}
+		
+		&--scroll {
+			@media (min-width: $desktop) {
+				background-color: $dark-bg;
+				box-shadow: 0 28px 87px 0 rgba(0, 0, 0, 0.3);
+			}
+		}
+	}
+}

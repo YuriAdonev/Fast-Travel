@@ -1,0 +1,115 @@
+.main-submenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+
+	width: 100vw;
+	height: 100vh;
+	
+	transform: translateX(-120%);
+	transition: transform 0.4s linear;
+	
+	@media (min-width: $desktop) {
+		display: none;
+		padding-left: 450px;
+		
+		transform: translateX(0);
+	}
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+		height: 100%;
+		padding: 30px 35px 30px 30px;
+		box-sizing: border-box;
+		
+		background-color: $white;
+		background-image: url(../img/compas-mobile.png);
+		background-repeat: no-repeat;
+		background-position: right 345px;
+		overflow-y: auto;
+		
+		@media (min-width: $desktop) {
+			justify-content: center;
+			width: 530px;
+			padding: 20px 100px 20px 100px;
+		}
+	}
+	&__top {
+		@media (min-width: $desktop) {
+			display: none;
+		}
+	}
+	&__back {
+		svg {
+		}
+	}
+	&__list {
+		margin: 20px 0 0;
+		padding: 0;
+		
+		list-style: none;
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 23px;
+		}
+	}
+	&__title {
+		display: block;
+		
+		font-size: 12px;
+		line-height: 16px;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: "gilroy-bold", sans-serif;
+		color: $black;
+		
+		@media (min-width: $desktop) {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+	&__links {
+		margin: 10px 0 0;
+		padding: 0;
+		
+		list-style: none;
+		li {
+		}
+	}
+	&__link {
+		display: block;
+		
+		font-size: 11px;
+		line-height: 24px;
+		text-decoration: none;
+		color: #616161;
+		
+		@media (min-width: $desktop) {
+			font-size: 18px;
+			line-height: 36px;
+		}
+	}
+	&__desc {
+		display: block;
+		margin-top: 4px;
+		
+		font-size: 10px;
+		line-height: 10px;
+		color: #616161;
+		
+		@media (min-width: $desktop) {
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+	&--show {
+		transform: translateX(0);
+		
+		@media (min-width: $desktop) {
+			display: block;
+		}
+	}
+}

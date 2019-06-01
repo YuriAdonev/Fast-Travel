@@ -1,10 +1,6 @@
-.header-social {
+.footer-social{
 	display: flex;
 	align-items: center;
-	
-	@media (min-width: $desktop) {
-		margin-top: 7px;
-	}
 	&__link {
 		font-size: 0;
 		color: transparent;
@@ -15,6 +11,18 @@
 	}
 	&__icon {
 		fill: $white;
+		
+		@media (min-width: $desktop) {
+			fill: #b3b3b3;
+			
+			transition: fill 0.2s linear;
+		}
+		
+		&:hover {
+			@media (min-width: $desktop) {
+				fill: $white;
+			}
+		}
 		
 		&--vk {
 			@media (min-width: $desktop) {

@@ -1,0 +1,39 @@
+.footer-nav {
+	display: none;
+	
+	@media (min-width: $desktop) {
+		display: block;
+	}
+	&__list {
+		@media (min-width: $desktop) {
+			display: flex;
+			justify-content: space-between;
+			width: 1170px;
+			margin: 0 auto;
+			padding: 25px 0;
+			
+			border-bottom: 1px solid #2d2d2e;
+			list-style: none;
+		}
+	}
+	&__item {
+		a {
+			@media (min-width: $desktop) {
+				font-size: 18px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: "gilroy-medium", sans-serif;
+				color: #b3b3b3;
+				
+				transition: color 0.2s linear;
+			}
+			
+			&:hover {
+				@media (min-width: $desktop) {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

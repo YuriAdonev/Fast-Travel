@@ -1,0 +1,83 @@
+.reviews {
+	padding-top: 30px;
+	
+	background-color: $white;
+	background-image: url(../img/review-bg-mobile.jpg);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	
+	@media (min-width: $desktop) {
+		padding-top: 80px;
+		
+		background-image: url(../img/review-bg-desktop.jpg);
+	}
+	&__wrap {
+		width: 100%;
+		
+		@media (min-width: $desktop) {
+			width: 1170px;
+			margin:  auto;
+		}
+	}
+	&__title {
+		width: 260px;
+		margin: 0 auto;
+		
+		text-align: center;
+		
+		@media (min-width: $desktop) {
+			width: 100%;
+		}
+	}
+	&__slider {
+		width: 100%;
+		padding-bottom: 135px;
+		
+		@media (min-width: $desktop) {
+			padding-bottom: 180px;
+		}
+	}
+}
+.reviews-arrows {
+	position: absolute;
+	bottom: 80px;
+	width: 100%;
+	
+	@media (min-width: $desktop) {
+		bottom: 100px;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+		
+		background-color: $accent;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		outline: none;
+		
+		@media (min-width: $desktop) {
+			width: 50px;
+			height: 50px;
+		}
+		svg {
+			fill: $white;
+		}
+		&--prev{
+			margin-right: 15px;
+			
+			@media (min-width: $desktop) {
+				margin-right: 20px;
+			}
+		}
+		&--next{
+		}
+	}
+}

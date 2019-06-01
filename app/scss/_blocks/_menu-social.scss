@@ -1,4 +1,4 @@
-.header-social {
+.menu-social {
 	display: flex;
 	align-items: center;
 	
@@ -11,6 +11,10 @@
 		
 		&:not(:last-child) {
 			margin-right: 20px;
+			
+			@media (min-width: $desktop) {
+				margin-right: 40px;
+			}
 		}
 	}
 	&__icon {

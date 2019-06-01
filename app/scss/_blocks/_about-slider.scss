@@ -1,0 +1,92 @@
+.about-slider {
+	margin-bottom: 35px;
+	
+	@media (min-width: $desktop) {
+		width: 420px;
+		margin: 0;
+	}
+	&__item {
+		@media (min-width: $desktop) {
+			position: relative;
+			width: 370px;
+		}
+	}
+	&__img {
+		display: block;
+		margin-bottom: 20px;
+		
+		@media (min-width: $desktop) {
+			width: 370px;
+			height: 615px;
+			margin-bottom: 0;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 16px;
+		font-family: "celeste-pro-book", serif;
+		
+		@media (min-width: $desktop) {
+			position: absolute;
+			right: 50px;
+			bottom: 0;
+			z-index: 2;
+			padding: 20px 40px;
+			
+			font-size: 24px;
+			line-height: 24px;
+			
+			background-color: $dark-bg;
+		}
+	}
+}
+
+.about-slider-arrows {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	
+	@media (min-width: $desktop) {
+		bottom: auto;
+		top: 45px;
+	}
+	&__wrapper {
+		display: flex;
+		
+		@media (min-width: $desktop) {
+			flex-direction: column;
+		}
+	}
+	&__btn {
+		display: block;
+		width: 15px;
+		height: 15px;
+		padding: 0;
+		margin: 0;
+		
+		background-color: transparent;
+		border: none;
+		outline: none;
+		
+		@media (min-width: $desktop) {
+			transform: rotate(90deg);
+		}
+		svg {
+			fill: $white;
+		}
+		&--next{
+			@media (min-width: $desktop) {
+				
+			}
+		}
+		&--prev{
+			margin-right: 20px;
+			
+			@media (min-width: $desktop) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

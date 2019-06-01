@@ -1,0 +1,45 @@
+.popup-form {
+	margin-top: 30px;
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+		
+		font-size: 14px;
+		line-height: 40px;
+		color: #000;
+		
+		border-radius: 20px;
+		border-color: #b5b5b5;
+		&:not(:last-of-type) {
+			margin-bottom: 15px;
+		}
+		&::placeholder {
+			color: #969696;
+		}
+	}
+	&__info {
+		margin: 16px 0 20px;
+		font-size: 10px;
+		a {
+			text-decoration: none;
+			color: $accent;
+		}
+	}
+	&__btn {
+		width: 150px;
+		margin: 0 auto;
+		
+		border: none;
+		cursor: pointer;
+		outline: none;
+		
+		@media (min-width: $desktop) {
+			width: 200px;
+			height: 40px;
+			
+			font-size: 12px;
+		}
+	}
+}
