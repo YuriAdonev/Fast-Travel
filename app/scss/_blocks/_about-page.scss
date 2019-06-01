@@ -1,0 +1,79 @@
+.about-page {
+	width: 260px;
+	margin: 30px auto 50px;
+	
+	@media (min-width: $desktop) {
+		width: 1170px;
+		margin: 30px auto 100px;
+	}
+	&__title {
+		margin: 0 0 15px;
+		
+		@media (min-width: $desktop) {
+			margin-bottom: 20px;
+		}
+	}
+	p {
+		margin: 0 0 20px;
+		
+		color: #292929;
+		
+		@media (min-width: $desktop) {
+			margin-bottom: 25px;
+			
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+	ul {
+		margin: 0 0 35px;
+		padding: 0;
+		
+		list-style: none;
+		
+		@media (min-width: $desktop) {
+			margin-bottom: 50px;
+		}
+	}
+	li {
+		margin: 0 0 20px;
+		
+		@media (min-width: $desktop) {
+			margin-bottom: 25px;
+			
+			font-size: 18px;
+			line-height: 28px;
+		}
+		
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 7px;
+			height: 7px;
+			margin-right: 9px;
+			
+			background-color: $accent;
+			border-radius: 50%;
+			
+			@media (min-width: $desktop) {
+				width: 8px;
+				height: 8px;
+				margin-right: 12px;
+			}
+		}
+	}
+	&__subtitle {
+		margin: 0 0 20px;
+		
+		font-size: 12px;
+		line-height: 16px;
+		font-family: "gilroy-bold", sans-serif;
+		
+		@media (min-width: $desktop) {
+			margin-bottom: 25px;
+			
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+}

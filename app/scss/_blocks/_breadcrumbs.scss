@@ -1,0 +1,42 @@
+.breadcrumbs {
+	display: none;
+	
+	@media (min-width: $desktop) {
+		display: block;
+		margin-top: 160px;
+	}
+	&__wrap {
+		display: flex;
+		width: 1170px;
+		margin: 0 auto;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		
+		&:not(:last-child) {
+			margin-right: 15px;
+			
+			&::after {
+				content: "";
+				display: block;
+				width: 10px;
+				height: 1px;
+				margin-left: 15px;
+
+				background-color: #7c7c7c;
+			}
+		}
+	}
+	a {
+		font-size: 18px;
+		text-decoration: none;
+		color: #7c7c7c;
+		transition: 0.2s linear;
+		&[href] {
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+}
