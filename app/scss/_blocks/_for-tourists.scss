@@ -1,0 +1,89 @@
+.for-tourists {
+	margin: 30px auto 50px;
+	
+	@media (min-width: $desktop) {
+		margin: 0 auto 100px;
+		padding-top: 190px;
+	}
+	&__head {
+		position: relative;
+		margin: 0 auto 40px;
+		padding-bottom: 25px;
+		
+		border-bottom: 1px solid rgba(28, 28, 30, 0.1);
+		
+		@media (min-width: $desktop) {
+			border: none;
+		}
+	}
+	&__title {
+		width: 260px;
+		margin: 30px auto 15px;
+		
+		text-align: center;
+		
+		@media (min-width: $desktop) {
+			width: 1170px;
+			margin: 42px 0 20px;
+		}
+	}
+	&__open-filter {
+		position: absolute;
+		bottom: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 86px;
+		height: 30px;
+		
+		font-size: 14px;
+		font-family: "gilroy-bold", sans-serif;
+		color: $white;
+		
+		background-color: $accent;
+		border: none;
+		border-radius: 7px;
+		
+		outline: none;
+		
+		@media (min-width: $desktop) {
+			display: none;
+		}
+		svg {
+			margin-left: 6px;
+			
+			fill: $white;
+		}
+	}
+	&__close-filter {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		
+		background-color: $accent;
+		border: none;
+		border-radius: 50%;
+		
+		outline: none;
+		
+		svg {
+			fill: $white;
+		}
+	}
+	&__wrap {
+		width: 260px;
+		margin: 0 auto;
+		
+		@media (min-width: $desktop) {
+			width: 1170px;
+		}
+	}
+}

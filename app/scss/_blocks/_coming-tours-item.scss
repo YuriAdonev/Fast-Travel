@@ -4,9 +4,38 @@
 			display: flex;
 		}
 	}
+	&__hover {
+		display: none;
+		
+		@media (min-width: $desktop) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			
+			background-color: rgba(20, 20, 22, 0.85);
+			opacity: 0;
+			
+			transition: opacity 0.3s linear;
+		}
+	}
 	&__img {
+		position: relative;
+		
 		@media (min-width: $desktop) {
 			flex-shrink: 0;
+		}
+		&:hover {
+			.coming-tours-item__hover {
+				@media (min-width: $desktop) {
+					opacity: 1;
+				}
+			}
 		}
 		img {
 			display: block;
@@ -165,6 +194,65 @@
 			@media (min-width: $desktop) {
 				font-size: 30px;
 			}
+		}
+	}
+	&__old-price {
+		display: flex;
+		justify-content: center;
+		
+		line-height: 1;
+		
+		@media (min-width: $desktop) {
+			justify-content: flex-start;
+		}
+		div {
+			position: relative;
+			margin: 0 auto;
+			
+			@media (min-width: $desktop) {
+				margin: 0;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				display: block;
+				height: 1px;
+
+				background-color: $orange;
+			}
+		}
+	}
+	&__tag {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 26px;
+		padding: 0 12px;
+		
+		font-size: 8px;
+		text-transform: uppercase;
+		font-family: "gilroy-bold", sans-serif;
+		color: $white;
+		
+		background-color: $orange;
+		border-radius: 13px;
+		
+		@media (min-width: $desktop) {
+			top: 35px;
+			left: 35px;
+			height: 38px;
+			padding: 0 25px;
+			
+			font-size: 12px;
+			
+			border-radius: 19px;
 		}
 	}
 }

@@ -177,4 +177,54 @@ $(function() {
 		});
 	}
 	
+	if ($(".for-tourists-filter").length) {
+		// For tourists filter
+		$(".for-tourists__open-filter").click(function(e) {
+			$('.for-tourists-filter').addClass('opened');
+			$('body').addClass('no-scroll');
+		});
+
+		$(".for-tourists__close-filter").click(function(e) {
+			$('.for-tourists-filter').removeClass('opened');
+			$('body').removeClass('no-scroll');
+		});
+		
+		// For tourists filter tabs
+		
+		var touristsTabsIndex = 1;
+		var tabs = document.querySelectorAll(".for-tourists-content__item");
+		var buttonsWrap = document.querySelector(".for-tourists-filter__wrap");
+		var buttons = document.querySelectorAll(".for-tourists-filter-list__item");
+		
+		showTabs(touristsTabsIndex);
+
+		function showTabs(slideIndex) {
+			tabs.forEach(function (item) {
+				return item.classList.remove("active");
+			});
+			buttons.forEach(function (item) {
+				return item.classList.remove("active");
+			});
+			tabs[slideIndex - 1].classList.add("active");
+			buttons[slideIndex - 1].classList.add("active");
+		}
+
+		function currentTab(n) {
+			showTabs(slideIndex = n);
+		}
+
+		buttonsWrap.addEventListener("click", function (event) {
+			for (var i = 0; i < buttons.length + 1; i++) {
+				if (event.target.classList.contains("for-tourists-filter-list__item") && event.target == buttons[i - 1]) {
+					currentTab(i);
+					if ($('.for-tourists-filter').hasClass("opened")) {
+						$('.for-tourists-filter').removeClass('opened');
+						$('body').removeClass('no-scroll');
+					}
+				}
+			}
+		});
+		
+	}
+	
 });
